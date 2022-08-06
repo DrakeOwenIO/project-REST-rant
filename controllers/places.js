@@ -1,7 +1,17 @@
 const express = require('express')
 const router = require('express').Router()
 
+// NEW RENDER
+router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
 
+// PLACE RENDER
+router.get('/:id', (req, res) =>{
+  res.render('places/:id')
+})
+
+// INDEX RENDER
 router.get('/', (req, res) => {
     let places = [{
   name: 'H-Thai-ML',
